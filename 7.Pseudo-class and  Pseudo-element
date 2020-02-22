@@ -1,0 +1,217 @@
+                          
+                          
+                       single ক্লোন-দিয়ে Selector ইউজ করেল সেটাকে  Pseudo-class  বেল 
+                       ----------------------------------------------------------------
+                       Double ক্লোন-দিয়  Selector  ইউজ করেল সেটাক  Pseudo-element  বেল 
+                             
+                       * এখানে       
+                            single ক্লোন বলা হয়   →  :
+                            Double ক্লোন বলা হয়   →  :: 
+                            Selector বলা হয়      →  {}
+=========================================================================================================================================                           
+              
+              **//  Pseudo Class  //**
+                
+                       1.  :hover
+                       2.  :focus
+                       3.  :active
+                       4.  :first-child
+                       5.  :last-child
+                       6.  :nth-child(n)
+                       
+=========================================================================================================================================
+
+        
+            **// Pseudo Element
+            
+                      1.  ::after
+                      2.  ::before
+                      3.  ::first-letter
+                      4.  ::first-line   
+         
+                          
+            **// Example of Pseudo Element
+                        
+                      p::first-letter{--}
+                      p::first-line{--}
+                      
+                      p::before/after{  
+                                      content:"--";
+                                   } 
+            
+            
+            
+            **// Life Example of Before and After
+          
+          Example-1:বিফোর আফটার ব্যবহার করে কিভাবে ট্যাক্স এর নিচে ছবি অথবা কালার করার নিয়ম
+          --------------------------------------------------------------------------------
+            <h3 class="mamam" style="text-align: center;"">Sagor Ahmed</h3>
+            <style>
+                .mamam::after{
+                        content:'';
+                        background: #7b1798;
+                        height: 1px;
+                        width: 107px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        display: block;
+                        transform: translateY(8px);
+                     }
+            <style>
+            
+          
+          
+            Example-2:বিফোর আফটার ব্যবহার করে কিভাবে ট্যাক্স এর নিচে কালার Overlappin করার নিয়ম
+            ---------------------------------------------------------------------------------  
+             <p class="title" style="text-align: center;">Habibur Rahman</p>
+             <style>
+               .title::before{
+                      content:'';
+                      background: #7b1798;
+                      height: 5px;
+                      width: 200px;
+                      margin-left: auto;
+                      margin-right: auto;
+                      display: block;
+                      transform: translateY(34px);
+                    }
+                      .title::after{
+                      content:'';
+                      background: #7b1798;
+                      height: 10px;
+                      width: 50px;
+                      margin-left: auto;
+                      margin-right: auto;
+                      margin-bottom: 40px;
+                      display: block;
+                      transform: translateY(8px);
+                    }
+            <style>
+            
+            
+             Example-3:বিফোর আফটার ব্যবহার করে কিভাবে box-shadow এর নিচে কালার Overlappin করার নিয়ম
+             ---------------------------------------------------------------------------------------
+              <div class="title-style">
+                 <h1>Habibur Rahman</h1>
+             </div>
+               <style>
+                  .title-style h1{
+                    padding:40px 0;
+                    text-align: center;
+                  }
+                  .title-style{
+                    margin: 0 auto 80px;
+                    height: 120px;
+                    width: 80%;
+                    max-width: 700%;
+                    background: #fff;
+                    position: relative;
+                    box-shadow: 0 4px 5px 0 rgba(0,0,50,0.5);
+                  }
+                  .title-style::after{
+                    content: '';
+                    height: 100px;
+                    width: 200px;
+                    background-color: #f992a6;
+                    position: absolute;
+                    top: -10px;
+                    left: -10px;
+                    z-index: -1;
+                  }
+                  .title-style::before{
+                    content: '';
+                    height: 100px;
+                    width: 200px;
+                    background-color: #f992a6;
+                    position: absolute;
+                    bottom: -10px;
+                    right: -10px;
+                    z-index: -1;
+                  }
+              </style>
+              
+              
+             Example-4:বিফোর আফটার ব্যবহার করে কিভাবে Resume এর পাশে লম্বা রাখা এবং border-radius কিভাবে একসাথে দেওয়া নিয়ম
+             -------------------------------------------------------------------------------------------------------------
+             
+             <section id="resume" class="resume">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                          <h3 class="text-center">My Experiences</h3>
+                          <ul class="timeline">
+                            <li>
+                              <h4 class="text-white"><span>2019 -</span>Front End Developer</h4>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, labore magni dignissimos doloribus minima unde dicta placeat impedit possimus temporibus voluptatem esse! Tenetur excepturi, est. Nostrum illo, eum vero expedita!
+                              <b>Company</b> -xyz Company Pvt Ltd<br/>
+                              <b>Company</b> -xyz Company Pvt Ltd<br/>
+                              <b>Company</b> -xyz Company Pvt Ltd<br/>
+                              </p>
+                            </li>
+                            <li>
+                              <h4 class="text-white"><span>2019 -</span>Front End Developer</h4>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, labore magni dignissimos doloribus minima unde dicta placeat impedit possimus temporibus voluptatem esse! Tenetur excepturi, est. Nostrum illo, eum vero expedita!
+                              <b>Company</b> -xyz Company Pvt Ltd<br/>
+                              <b>Company</b> -xyz Company Pvt Ltd<br/>
+                              <b>Company</b> -xyz Company Pvt Ltd<br/>
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+             </section>
+             
+             <style>
+                  .resume{
+                    padding-top: 50px;
+                    padding-bottom: 30px;
+                    background: #f9f9f9;
+                  }
+                  .timeline h3{
+                    margin-bottom: 50px;
+                  }
+                  .timeline{
+                    list-style-type: none;
+                    position: relative;
+                  }
+                  .timeline li{
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    background: #fff;
+                  }
+                  .timeline li h4{
+                    background-color: #000;
+                    padding: 5px 0 5px 20px;
+                    column-rule-color: #fff;
+                    font-size: 15px;
+                  }
+                  .timeline li h4 span{
+                    font-weight: bold;
+                    color: #ccc;
+                  }
+                  .timeline::before{
+                    content: '';
+                    background: #555;
+                    display: inline-block;
+                    position: absolute;
+                    left: 29px;
+                    width: 2px;
+                    height: 100%;
+                    z-index: 1;
+                  }
+                  .timeline li::before{
+                    content: '';
+                    background: #fff;
+                    display: inline-block;
+                    position: absolute;
+                    border: 3px solid #000;
+                    border-radius: 50%;
+                    left: 20px;
+                    width: 20px;
+                    height: 20px;
+                    z-index: 1;
+                  }
+             </style>
+=========================================================================================================================================                          
