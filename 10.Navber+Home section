@@ -1,0 +1,76 @@
+  
+      <style>
+            .navbar {
+            box-shadow: 2px 2px 5px #3292a6;
+            background: #fff;
+            opacity: 0.9; 
+            }
+          .navbar .nav-item {
+            font-size: 1.4rem;
+            padding-right: 20px; 
+            }
+          .navbar .nav-link {
+            color: #252525; 
+            }
+          .navbar .nav-link:hover {
+            color: #3292a6; 
+            }
+          .navbar .nav-item:last-child {
+            padding-right: 0; 
+           }
+  
+        body {
+          margin-top: 80px; 
+        }
+        
+        
+#showcase {
+  background: linear-gradient(rgba(50, 146, 156, 0.7), rgba(50, 146, 156, 0.7)), url("img/mountains.jpg"); 
+  }
+    </style>
+   
+  
+  
+         <nav class="navbar navbar-light navbar-expand-lg py-3 fixed-top">
+              <div class="container">
+                <a href="#showcase" class="navbar-brand">
+                  <img src="img/mlogo.png" class="img-fluid" width="50" height="50" alt="M">
+                  <h3 class="d-inline align-middle">Mizuxe</h3>
+                </a>
+                <button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarNav">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                       <ul class="navbar-nav ml-auto">
+                         <li class="nav-item">
+                           <a class="nav-link" href="#showcase">Home</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link" href="#about">About</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link" href="#authors">Meet The Authors</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link" href="#contact">Contact</a>
+                         </li>
+                       </ul>
+                </div>
+              </div>
+            </nav>
+
+  <!-- Show-case -->
+  <section id="showcase" class="py-3 text-center text-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <h1 class="display-3 mt-5 pt-5">Do What You Dream Of...</h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, deleniti.</p>
+            <a href="#" class="btn btn-outline-light btn-lg" ><i class="fa fa-arrow-right"></i> Read More</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="img/book.png" class="img-fluid d-none d-lg-block" alt="Book">
+          </div>
+        </div>
+      </div>
+  </section>
